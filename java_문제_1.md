@@ -107,7 +107,7 @@ public class ScopeTest {
 
 ```java
 int grade = 85;
-// switch 문을 여기에 작성. grade 는 10으로 나눈 몫을 활용합니다.
+// switch 문을 여기에 작성. grade 를 10으로 나눈 몫을 활용합니다.
 ```
 ---
 
