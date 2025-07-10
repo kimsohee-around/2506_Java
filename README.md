@@ -9,3 +9,10 @@
   - 위의 링크 사이트에서 생성하기
   - 개발 환경 입력(선택) 하기 : Windows, VisualStudioCode, Eclipse, Java
 - git 저장소는 java_workspace 폴더로 하겠습니다.
+
+### 수업 진도
+
+- 1일차 : 자바의 데이터 타입 (기본타입과 객체타입)
+- 2일차
+  - 오전 : 객체의 참조값, 불변 객체, toString() 재정의
+  - 오후 :
