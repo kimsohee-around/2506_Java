@@ -7,6 +7,9 @@ public class B06MyMethodTest {
     System.out.println(MyClass.message);
     MyClass.hello("React");
     MyClass.hello("HTML");
+
+    System.out.println("MyClass message 변수 문자열 : " + MyClass.getMessage());
+    System.out.println("MyClass message 변수 문자열 길이 : " + MyClass.getMessageLength());
   }
 
 }
@@ -24,6 +27,7 @@ class MyClass {
 
   static String message;
 
+  // 메소드 인자가 없는 것 vs 있는 것
   static void hello() {
     System.out.println("-------------------");
     System.out.println("Welcome!! 자바");
@@ -34,5 +38,19 @@ class MyClass {
     System.out.println("-------------------");
     System.out.println("Welcome!! " + language); // language 변수는 메소드 입력값-> 인자로 선언
     System.out.println("-------------------");
+  }
+
+  // 리턴 있는 메소드
+  static String getMessage() {
+    return message;
+  }
+
+  static int getMessageLength() {
+    return message.length(); // length() : 문자열의 길이를 구하는 메소드
+  }
+
+  // getStringInfo(문자열) 실행하면 문자열의 길이 리턴하는 메소드
+  static int getStringInfo(String data) {
+    return data.length();
   }
 }
