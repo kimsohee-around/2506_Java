@@ -23,7 +23,7 @@ public class B10SwitchCaseTest {
         case "/":
           System.out.println("나누기 선택 하셨습니다.");
           break;
-        case "N":
+        case "N", "n": // while 종료 조건
           status = false;
           break;
         default:
