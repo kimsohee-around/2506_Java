@@ -44,14 +44,9 @@ System.out.println(p1 == p3);
 다음 Student 클래스에서 toString() 메소드를 재정의하여 "이름: 홍길동, 나이: 20" 형태로 출력되도록 코드를 작성하시오.
 ```java
 class Student {
-    private String name;
-    private int age;
-    
-    public Student(String name, int age) {
-        this.name = name;
-        this.age = age;
-    }
-    
+    String name;
+    int age;
+     
     // toString() 메소드를 여기에 작성
 }
 ```
@@ -112,7 +107,7 @@ public class ScopeTest {
 
 ```java
 int grade = 85;
-// switch 문을 여기에 작성. grade 는 10으로 나눈 몫을 활용합니다.
+// switch 문을 여기에 작성. grade 를 10으로 나눈 몫을 활용합니다.
 ```
 ---
 
