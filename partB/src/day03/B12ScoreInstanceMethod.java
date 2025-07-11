@@ -16,7 +16,6 @@ public class B12ScoreInstanceMethod {
     System.out.println("eng : " + momo.isEngValid());
     System.out.println("math : " + momo.isMathValid());
     System.out.println("모든 점수 : " + momo.isScoresValid());
-<<<<<<< HEAD
     System.out.println("점수 수정 중......");
     // momo.eng = 100;
     if (momo.isScoresValid()) {
@@ -24,19 +23,11 @@ public class B12ScoreInstanceMethod {
       System.out.println("총점 : " + momo.sum());
       System.out.println("평균 : " + momo.avg());
       // System.out.println("학점 : " + momo.getGrade());
-=======
-    if (momo.isScoresValid()) {
-      // 점수 합계
-      System.out.println();
->>>>>>> e1b4a3569a6c77ffb2c8f80b92660ee0f7c4a9bf
     } else {
       // 이스케이프 문자 \\ , \"
       System.out.println("점수값 오류 (\"모든 과목의 점수는 \\0~100\\ 로 합니다.\")");
     }
-<<<<<<< HEAD
     System.out.println("학점:" + (momo.isScoresValid() ? momo.getGrade() : 'E'));
-=======
->>>>>>> e1b4a3569a6c77ffb2c8f80b92660ee0f7c4a9bf
   }
 }
 
