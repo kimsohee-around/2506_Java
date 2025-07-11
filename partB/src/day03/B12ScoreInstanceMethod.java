@@ -16,13 +16,18 @@ public class B12ScoreInstanceMethod {
     System.out.println("eng : " + momo.isEngValid());
     System.out.println("math : " + momo.isMathValid());
     System.out.println("모든 점수 : " + momo.isScoresValid());
+    System.out.println("점수 수정 중......");
+    // momo.eng = 100;
     if (momo.isScoresValid()) {
       // 점수 합계
-      System.out.println();
+      System.out.println("총점 : " + momo.sum());
+      System.out.println("평균 : " + momo.avg());
+      // System.out.println("학점 : " + momo.getGrade());
     } else {
       // 이스케이프 문자 \\ , \"
       System.out.println("점수값 오류 (\"모든 과목의 점수는 \\0~100\\ 로 합니다.\")");
     }
+    System.out.println("학점:" + (momo.isScoresValid() ? momo.getGrade() : 'E'));
   }
 }
 
@@ -35,6 +40,14 @@ class Score {
   // 점수의 합계 구하기 - int 리턴
   int sum() {
     return kor + eng + math;
+  }
+
+  double avg() {
+    // 나눗셈 결과를 실수로 하고 싶다면..... 2개의 정수 중 하나를 실수로 변경
+    // 강제 형변환-casting. 값 앞에 (double)변수명. primitive 타입끼리 변환
+    // ㄴ 정수와 실수는 둘다 수치 -> 강제 캐스팅, Double.valueOf 모두 가능
+    // ㄴ 문자열과 실수는 성격이 다름. -> 강제 캐스팅 X, Double.valueOf 만 가능
+    return (double) sum() / 3;
   }
 
   // 평균 : 90 점 이상 'A', 80점 이상 'B', 70 점 이상 'C', 그 외에는 'F' - char 리턴
