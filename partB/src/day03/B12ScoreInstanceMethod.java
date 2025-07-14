@@ -12,9 +12,10 @@ public class B12ScoreInstanceMethod {
     momo.math = 88;
     System.out.println("객체의 값 유효성 검사하기 -------");
     System.out.println("name : " + momo.isNameValid());
-    System.out.println("kor : " + momo.isKorValid());
-    System.out.println("eng : " + momo.isEngValid());
-    System.out.println("math : " + momo.isMathValid());
+    // 🔥 7월14일 복습 - 메소드의 은닉
+    // System.out.println("kor : " + momo.isKorValid());
+    // System.out.println("eng : " + momo.isEngValid());
+    // System.out.println("math : " + momo.isMathValid());
     System.out.println("모든 점수 : " + momo.isScoresValid());
     System.out.println("점수 수정 중......");
     // momo.eng = 100;
@@ -42,7 +43,6 @@ class Score {
     return kor + eng + math;
   }
 
-<<<<<<< HEAD
   double avg() {
     // 나눗셈 결과를 실수로 하고 싶다면..... 2개의 정수 중 하나를 실수로 변경
     // 강제 형변환-casting. 값 앞에 (double)변수명. primitive 타입끼리 변환
@@ -51,8 +51,6 @@ class Score {
     return (double) sum() / 3;
   }
 
-=======
->>>>>>> e1b4a3569a6c77ffb2c8f80b92660ee0f7c4a9bf
   // 평균 : 90 점 이상 'A', 80점 이상 'B', 70 점 이상 'C', 그 외에는 'F' - char 리턴
   // ㄴ 정수 / 정수 = 정수(몫)
   char getGrade() {
@@ -84,22 +82,24 @@ class Score {
     return name.matches("^[가-힣]{2,5}$");
   }
 
-  boolean isScoresValid() {
+  boolean isScoresValid() { // 모든 점수가 유효한지 외부에서 사용하도록 함.
     return isKorValid() && isEngValid() && isMathValid();
   }
 
+  // 🔥 7월14일 복습 - 메소드의 은닉. 메소드를 private 으로 변경함.
+  // ㄴ isScoresValid() 에서만 사용.
   // kor : 0~100 isKorValid
-  boolean isKorValid() {
+  private boolean isKorValid() {
     return kor >= 0 && kor <= 100;
   }
 
   // eng : 0~100
-  boolean isEngValid() {
+  private boolean isEngValid() {
     return eng >= 0 && eng <= 100;
   }
 
   // math : 0~ 100
-  boolean isMathValid() {
+  private boolean isMathValid() {
     return math >= 0 && math <= 100;
   }
 
