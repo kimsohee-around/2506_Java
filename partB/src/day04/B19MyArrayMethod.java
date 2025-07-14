@@ -17,7 +17,7 @@ public class B19MyArrayMethod {
     System.out.println("sumOfArrayValue - scores 배열 : " + sumOfArrayValue(scores));
     System.out.println("sumOfArrayValue - scores2 배열 : " + sumOfArrayValue(scores2));
 
-    int[] mergeArr = mergeOfArray(scores, scores2);
+    int[] mergeArr = mergeOfArray(scores, scores2); // 리턴이 배열의 참조값. mergeArr 변수에 저장.
     System.out.println("합친 배열의 크기 : " + mergeArr.length);
     System.out.println("합친 배열 요소 : " + Arrays.toString(mergeArr));
   }
