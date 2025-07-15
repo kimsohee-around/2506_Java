@@ -1,0 +1,218 @@
+{
+  // IntelliSense를 사용하여 가능한 특성에 대해 알아보세요.
+  // 기존 특성에 대한 설명을 보려면 가리킵니다.
+  // 자세한 내용을 보려면 https://go.microsoft.com/fwlink/?linkid=830387을(를) 방문하세요.
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Current File",
+      "request": "launch",
+      "mainClass": "${file}",
+      "vmArgs": "-Xlog:gc*:file=gc.log:time,uptime,level,tags"
+    },
+    {
+      "type": "java",
+      "name": "App",
+      "request": "launch",
+      "mainClass": "App",
+      "projectName": "partB_615f305a"
+    },
+    {
+      "type": "java",
+      "name": "B01ObjectTest",
+      "request": "launch",
+      "mainClass": "day02.B01ObjectTest",
+      "projectName": "partB_615f305a"
+    },
+    {
+      "type": "java",
+      "name": "B02StringTest",
+      "request": "launch",
+      "mainClass": "day02.B02StringTest",
+      "projectName": "partB_615f305a"
+    },
+    {
+      "type": "java",
+      "name": "B03StringForTest",
+      "request": "launch",
+      "mainClass": "day02.B03StringForTest",
+      "projectName": "partB_615f305a"
+    },
+    {
+      "type": "java",
+      "name": "B04OverrideTest",
+      "request": "launch",
+      "mainClass": "day02.B04OverrideTest",
+      "projectName": "partB_615f305a"
+    },
+    {
+      "type": "java",
+      "name": "B05ConsoleInput",
+      "request": "launch",
+      "mainClass": "day02.B05ConsoleInput",
+      "projectName": "partB_615f305a"
+    },
+    {
+      "type": "java",
+      "name": "B06MyMethodTest",
+      "request": "launch",
+      "mainClass": "day02.B06MyMethodTest",
+      "projectName": "partB_615f305a"
+    },
+    {
+      "type": "java",
+      "name": "B07MyCalculatorTest",
+      "request": "launch",
+      "mainClass": "day02.B07MyCalculatorTest",
+      "projectName": "partB_615f305a"
+    },
+    {
+      "type": "java",
+      "name": "B08OverflowTest",
+      "request": "launch",
+      "mainClass": "day02.B08OverflowTest",
+      "projectName": "partB_615f305a"
+    },
+    {
+      "type": "java",
+      "name": "B09VariableScope",
+      "request": "launch",
+      "mainClass": "day02.B09VariableScope",
+      "projectName": "partB_615f305a"
+    },
+    {
+      "type": "java",
+      "name": "B10SwitchCaseTest",
+      "request": "launch",
+      "mainClass": "day02.B10SwitchCaseTest",
+      "projectName": "partB_615f305a"
+    },
+    {
+      "type": "java",
+      "name": "B11StringInstanceMethod",
+      "request": "launch",
+      "mainClass": "day03.B11StringInstanceMethod",
+      "projectName": "partB_615f305a"
+    },
+    {
+      "type": "java",
+      "name": "B12ScoreInstanceMethod",
+      "request": "launch",
+      "mainClass": "day03.B12ScoreInstanceMethod",
+      "projectName": "partB_615f305a"
+    },
+    {
+      "type": "java",
+      "name": "B13Casting",
+      "request": "launch",
+      "mainClass": "day03.B13Casting",
+      "projectName": "partB_615f305a"
+    },
+    {
+      "type": "java",
+      "name": "B14AccessTest",
+      "request": "launch",
+      "mainClass": "day03.B14AccessTest",
+      "projectName": "partB_615f305a"
+    },
+    {
+      "type": "java",
+      "name": "B15PeopleTest",
+      "request": "launch",
+      "mainClass": "day03.B15PeopleTest",
+      "projectName": "partB_615f305a"
+    },
+    {
+      "type": "java",
+      "name": "B16Static_InstanceQuiz",
+      "request": "launch",
+      "mainClass": "day03.B16Static_InstanceQuiz",
+      "projectName": "partB_615f305a"
+    },
+    {
+      "type": "java",
+      "name": "B17ConstructorTest",
+      "request": "launch",
+      "mainClass": "day04.B17ConstructorTest",
+      "projectName": "partB_615f305a"
+    },
+    {
+      "type": "java",
+      "name": "B18ArrayTest",
+      "request": "launch",
+      "mainClass": "day04.B18ArrayTest",
+      "projectName": "partB_615f305a"
+    },
+    {
+      "type": "java",
+      "name": "B19MyArrayMethod",
+      "request": "launch",
+      "mainClass": "day04.B19MyArrayMethod",
+      "projectName": "partB_615f305a"
+    },
+    {
+      "type": "java",
+      "name": "B20PeopleArrTest",
+      "request": "launch",
+      "mainClass": "day04.B20PeopleArrTest",
+      "projectName": "partB_615f305a"
+    },
+    {
+      "type": "java",
+      "name": "B21MathRandom",
+      "request": "launch",
+      "mainClass": "day04.B21MathRandom",
+      "projectName": "partB_615f305a"
+    },
+    {
+      "type": "java",
+      "name": "Counter",
+      "request": "launch",
+      "mainClass": "day04.Counter",
+      "projectName": "partB_615f305a"
+    },
+    {
+      "type": "java",
+      "name": "Score",
+      "request": "launch",
+      "mainClass": "day04.Score",
+      "projectName": "partB_615f305a"
+    },
+    {
+      "type": "java",
+      "name": "Student",
+      "request": "launch",
+      "mainClass": "day04.Student",
+      "projectName": "partB_615f305a"
+    },
+    {
+      "type": "java",
+      "name": "CalculatorTest",
+      "request": "launch",
+      "mainClass": "test.CalculatorTest",
+      "projectName": "partB_615f305a"
+    },
+    {
+      "type": "java",
+      "name": "Counter(1)",
+      "request": "launch",
+      "mainClass": "test.Counter",
+      "projectName": "partB_615f305a"
+    },
+    {
+      "type": "java",
+      "name": "MyTest01",
+      "request": "launch",
+      "mainClass": "test.MyTest01",
+      "projectName": "partB_615f305a"
+    },
+    {
+      "type": "java",
+      "name": "Score2Test",
+      "request": "launch",
+      "mainClass": "test.Score2Test",
+      "projectName": "partB_615f305a"
+    }
+  ]
+}
