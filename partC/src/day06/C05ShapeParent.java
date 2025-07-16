@@ -130,12 +130,12 @@ class TTriangle extends TShape {
 
   @Override
   public void draw() {
-    super.draw();
+    // super.draw();
     System.out.println("    #    ");
-    System.out.println("   ###   ");
-    System.out.println("  #####  ");
-    System.out.println(" ####### ");
-    System.out.println("#########");
+    System.out.println("   # #   ");
+    System.out.println("  #   #  ");
+    System.out.println(" #     # ");
+    System.out.println("##########");
   }
 
 }
@@ -169,11 +169,11 @@ class TCircle extends TShape {
   @Override
   public void draw() {
     super.draw();
-    System.out.println("   @@@@  ");
-    System.out.println(" @      @ ");
-    System.out.println("@        @");
-    System.out.println("@        @");
-    System.out.println(" @      @ ");
-    System.out.println("   @@@@    ");
+    System.out.println("   @ @ @  ");
+    System.out.println(" @       @ ");
+    System.out.println("@         @");
+    System.out.println("@         @");
+    System.out.println(" @       @ ");
+    System.out.println("   @ @ @    ");
   }
 }
