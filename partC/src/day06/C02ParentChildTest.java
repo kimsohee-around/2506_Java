@@ -3,29 +3,41 @@ package day06;
 public class C02ParentChildTest {
   public static void main(String[] args) {
     YourParent yp = new YourParent();
+    yp.setMessage("Welcome!!");
+    System.out.println("부모의 메시지 : " + yp.getMessage());
+
+    YourChild yc = new YourChild();
+    yc.setMessage("Welcome!!");
+    System.out.println("자식의 메시지 : " + yc.getMessage());
+    yc.setName("모모");
+    System.out.println("자식 이름 : " + yc.getName());
 
   }
 }
 
 class YourChild extends YourParent {
 
-  // 부모가 정의한 setMessage() 재정의 가능함.
+  // 부모가 정의한 setMessage() 재정의 가능함. -> 기능 수행을 변경.
   // ✅주의 : 부모가 public -> 자식도 반드시 public
   @Override
   public void setMessage(String message) {
-    this.message = message;
+    // this.message = message; // private 접근. 오류
+    String imoji = "😊";
+    super.setMessage(message.concat(imoji)); // super 키워드 : 부모 객체
+    // super 를 안쓰면 자식의 setMessage() 를 실행하면서 무한으로 'self 호출'(재귀)
   }
 
   @Override
   public void setName(String name) {
-    this.name = name;
+    this.name = "👩" + name;
   }
+
 }
 
 class YourParent {
   private String message;
   private int num;
-  protected String name; // protected : 자식에게만 물려주는 요소
+  protected String name; // ✅ protected : 자식만 접근할 수 있도록 합니다.
 
   YourParent() {
     this.message = "unknown";
