@@ -15,5 +15,42 @@ public , default, protected 접근 제어요소만 상속 받습니다.
 자식이 갖는 추가적인 요소와 재정의 메소드들이 자식객체에 반영
 
 
+--------------------------------------------------------------------------
+* 도형으로 그림 게임 만들기. (예시) - 도형 객체가 필요합니다.
+C05ShapeParent
+* 도형의 종류 : 
+  부모클래스 : 도형의 공통점을 찾아서 Shape 정의
+               - 속성 :  posX, posY, width, height, color, id
+	  - 기능 :  move(offsetX , offsetY)      -> setter 역할
+                           resize(offsetW, offsetH)     -> setter 역할
+                           color(color)   -> setter 역할
+                           calcArea()  넓이 리턴
+		 draw() : 속성값을 출력하기
+		 int[] getPosition()  { return new int[]{ posX, posY };  }
+	              int[] getSize()
+                   기본 생성자 : 공유 count++ 후에 id 값으로 대입하기
+                                      color 기본값은 "black"
+                   커스텀 생성자 : 기본생성자 초기화와  posX, posY, width, height, color 초기화
+
+
+  자식클래스 정의 :  사각형(Rectangle), 삼각형(Triangle), 원(Circle)  
+                    - 재정의 메소드
+                       calcArea() ,  draw() 
+                    - 추가 속성이 필요한 자식클래스는? 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
