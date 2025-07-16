@@ -16,6 +16,14 @@ public class B26ExceptionTest {
       System.out.println("프로그램 종료합니다. 모든 자원을 해제합니다.");
       // XXXX.close()
     }
+
+    // 0으로 나눈는 예외 테스트
+    test.divide(23, 0); // java.lang.ArithmeticException: / by zero
+
+  }
+
+  public void divide(int a, int b) {
+    System.out.println(a / b);
   }
 
   /*
@@ -28,10 +36,10 @@ public class B26ExceptionTest {
    * 예외를 예상한다면... 개발자는 try{ }catch{ }finally{} 구문 처리
    * 
    * 🔥Runtime 예외는 try ~ catch(예외처리) 필수가 아닙니다.
-   * 🔥Checked 예외는 반드시 예외처리 해야 합니다. 
+   * 🔥Checked 예외는 반드시 예외처리 해야 합니다.
    * 메소드 중에는 Checked 예외를 발생시키는 것들이 있습니다.
    * 특히 입출력 작업 메소드는 IOException 예외를 발생시킵니다.
-   *  (대표적인 Checked 예외입니다.)
+   * (대표적인 Checked 예외입니다.)
    */
 
   public void inputNumber() {
