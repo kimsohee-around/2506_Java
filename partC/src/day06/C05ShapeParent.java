@@ -2,12 +2,11 @@ package day06;
 
 public class C05ShapeParent {
   public static void main(String[] args) {
-    TShape rec = new TRectangle();
-    TShape cir = new TCircle();
-    TShape tri = new TTriangle();
+    TShape rec = new TRectangle(10, 10, 220, 190, "yellow");
+    TShape cir = new TCircle(10, 20, 0, 0, "blue");
+    TShape tri = new TTriangle(50, 100, 400, 500, "orange");
 
     System.out.println(rec.getId());
-
     System.out.println(cir.getId());
     System.out.println(tri.getId());
 
@@ -69,7 +68,7 @@ class TShape {
   }
 
   public void draw() {
-    System.out.println("도형 그리기 : " + this.toString() + "area: " + calcArea());
+    System.out.println("도형 그리기 : " + this.toString() + "  area: " + calcArea());
   }
 
   public int getId() {
@@ -92,6 +91,15 @@ class TShape {
 
 class TRectangle extends TShape {
 
+  // 부모클래스의 커스텀 생성자를 사용하기 위해서 자식 클래스도 정의합니다.
+  TRectangle() {
+    super(); // 생략 가능
+  }
+
+  TRectangle(int posX, int posY, int width, int height, String color) {
+    super(posX, posY, width, height, color);
+  }
+
   @Override
   public void draw() {
     super.draw(); // 부모가 정의 draw() 실행하기
@@ -106,6 +114,14 @@ class TRectangle extends TShape {
 }
 
 class TTriangle extends TShape {
+
+  TTriangle() {
+    super(); // 생략 가능
+  }
+
+  TTriangle(int posX, int posY, int width, int height, String color) {
+    super(posX, posY, width, height, color);
+  }
 
   @Override
   public double calcArea() {
@@ -128,6 +144,14 @@ class TCircle extends TShape {
   // 원에 필요한 반지름을 새로운 속성으로 추가
   private int radius;
   private static final double PI = 3.14; // 상수로 선언.
+
+  TCircle() {
+    super(); // 생략 가능
+  }
+
+  TCircle(int posX, int posY, int width, int height, String color) {
+    super(posX, posY, width, height, color);
+  }
 
   @Override
   public double calcArea() {
