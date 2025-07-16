@@ -23,10 +23,6 @@ public class C02ParentChildTest {
   }
 }
 
-class YourChild2 extends YourParent { // 부모가 갖고 있지 않는 속성, 메소드를 추가하는 자식 클래스
-
-}
-
 class YourChild extends YourParent { // 부모가 물려준 메소드를 재정의하는 자식클래스
 
   // 부모가 정의한 setMessage() 재정의 가능함. -> 기능 수행을 변경.
