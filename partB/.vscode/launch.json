@@ -6,6 +6,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "B29StringArray",
+      "request": "launch",
+      "mainClass": "day05.B29StringArray",
+      "projectName": "partB_615f305a"
+    },
+    {
+      "type": "java",
       "name": "Current File",
       "request": "launch",
       "mainClass": "${file}",

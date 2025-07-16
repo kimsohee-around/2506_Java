@@ -31,7 +31,7 @@ replay_pid*
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
-!.vscode/launch.json
+# !.vscode/launch.json
 !.vscode/extensions.json
 !.vscode/*.code-snippets
 
@@ -71,5 +71,9 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+
+gc.log.*
+launch.json
 
 # End of https://www.toptal.com/developers/gitignore/api/windows,visualstudiocode,java
