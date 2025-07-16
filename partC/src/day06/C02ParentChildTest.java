@@ -12,19 +12,31 @@ public class C02ParentChildTest {
     yc.setName("모모");
     System.out.println("자식 이름 : " + yc.getName());
 
+    yp.setNum(1000);
+    yp.setName("김땡땡");
+    yc.setNum(999);
+
+    System.out.println("~~~~~ 부모와 자식의 객체 ~~~~~");
+    System.out.println(yp);
+    System.out.println(yc); // 부모가 재정의한 toString() 을 자식이 상속 받음.
+
   }
 }
 
-class YourChild extends YourParent {
+class YourChild2 extends YourParent { // 부모가 갖고 있지 않는 속성, 메소드를 추가하는 자식 클래스
+
+}
+
+class YourChild extends YourParent { // 부모가 물려준 메소드를 재정의하는 자식클래스
 
   // 부모가 정의한 setMessage() 재정의 가능함. -> 기능 수행을 변경.
   // ✅주의 : 부모가 public -> 자식도 반드시 public
   @Override
   public void setMessage(String message) {
-    // this.message = message; // private 접근. 오류
-    String imoji = "😊";
+    // this.message = message; // ❌ private 접근. 오류
+    String imoji = "😊"; // vs code 에서 이모지 출력하려면 터미널 명령어 chcp 65001 실행하기
     super.setMessage(message.concat(imoji)); // super 키워드 : 부모 객체
-    // super 를 안쓰면 자식의 setMessage() 를 실행하면서 무한으로 'self 호출'(재귀)
+    // ✅주의 : super 를 안쓰면 자식의 setMessage() 를 실행하면서 무한으로 'self 호출'(재귀)
   }
 
   @Override
