@@ -132,9 +132,9 @@ class TTriangle extends TShape {
   public void draw() {
     // super.draw();
     System.out.println("    #    ");
-    System.out.println("   # #   ");
-    System.out.println("  #   #  ");
-    System.out.println(" #     # ");
+    System.out.println("   #  #   ");
+    System.out.println("  #    #  ");
+    System.out.println(" #      # ");
     System.out.println("##########");
   }
 
