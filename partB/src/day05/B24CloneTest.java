@@ -6,9 +6,9 @@ public class B24CloneTest {
   public static void main(String[] args) {
     try {
       Student sana = new Student("최사나", 29);
-      Student sanaClone = sana.clone();   
+      Student sanaClone = sana.clone();
       // checked 예외 : 컴파일러가 메소드의 예외 가능성을 알고 있어요.
-      //     -> 예외 처리 필수.
+      // -> 예외 처리 필수.
       System.out.println("sanaClone: " + sanaClone.getName()
           + "," + sanaClone.getAge());
 
