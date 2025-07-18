@@ -10,14 +10,16 @@ public class C12ProductProblem {
     products[2] = new Product("갤럭시 플립", 12345.78);
     products[3] = new Product("아이폰 ", 42456.12);
 
-    System.out.println(products[0].compareTo(products[1]));
+    System.out.println("products[0].compareTo(products[1]) : " + products[0].compareTo(products[1]));
 
+    System.out.println("~~~~ products 배열 정렬 ~~~~");
     Arrays.sort(products); // compareTo 재정의가 정확해야 정렬이 됩니다.
 
     for (Product p : products) {
       System.out.println(p);
     }
 
+    System.out.println("~~~~ 실수 Double 과 double 비교 메소드 ~~~~");
     Double a = 123.45; // 래퍼 클래스 타입
     Double b = 234.56;
 
@@ -29,23 +31,31 @@ public class C12ProductProblem {
     System.out.println("double 타입 실수 비교 :  " + Double.compare(c, d)); // -1
     System.out.println("double 타입 실수 비교 :  " + Double.compare(d, c)); // 1
 
-    // 얕은 복사 확인
+    // 얕은 복사 확인을 위한 객체 생성과 전달
     Company c1 = new Company("LG전자", "서울시 서초구");
     products[0].setCompany(c1);
 
     Product pclone = null;
     try {
-      pclone = (Product) products[0].clone();
+      pclone = (Product) products[0].clone(); // 복제 실행
     } catch (CloneNotSupportedException e) {
       System.out.println("clone 예외!");
     }
     System.out.println("~~~~~ 얕은 복사 테스트 ~~~~~");
-    System.out.println(products[0]);
-    System.out.println(pclone);
-    System.out.println(" \t 주소 참조값 확인");
-    System.out.println(products[0].hashCode());
-    System.out.println(pclone.hashCode());
+    System.out.println("복제 후의 아래의 두 객체는 데이터 내용이 같아야 합니다.");
+    System.out.println("products[0] : " + products[0]);
+    System.out.println("pclone : " + pclone);
+    System.out.println(" \t Product 타입 객체 참조값 확인");
+      System.out.println("그러나, 복제 후의 아래의 두 객체는 주소는 다릅니다.(새로운 객체로 복제)");
+    System.out.println(products[0].hashCode() + "," + Integer.toHexString(products[0].hashCode()));
+    System.out.println(pclone.hashCode() + "," + Integer.toHexString(pclone.hashCode()));
     // products[0] 의 company 주소와 복제한 pclone 의 company 주소가 같은 얕은 복사
+    System.out.println("~~~~ 복제된 객체의 멤버 변수 company 객체의 참조값 확인 ~~~~");
+    System.out.println("멤버 변수 Company 객체는 새로운 객체 복사 아니고 참조값 복사.참조값 동일");
+    System.out.println("products[0].getCompany() : " + products[0].getCompany());
+    System.out.println("pclone.getCompany() : " + pclone.getCompany());
+    // 🔥 clone() 의 기본 동작이 '얕은 복사'이므로 멤버 값 중 객체는 참조값을 복사합니다.
+    //    깊은 복사는 각각 company 객체가 다른 주소 즉 새로운 객체로 복사되는 것 입니다.
 
   }
 }
