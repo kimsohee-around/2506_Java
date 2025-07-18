@@ -11,7 +11,6 @@ public class C02ParentChildTest {
     System.out.println("자식의 메시지 : " + yc.getMessage());
     yc.setName("모모");
     System.out.println("자식 이름 : " + yc.getName());
-
     yp.setNum(1000);
     yp.setName("김땡땡");
     yc.setNum(999);
