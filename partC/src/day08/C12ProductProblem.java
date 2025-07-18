@@ -29,12 +29,56 @@ public class C12ProductProblem {
     System.out.println("double 타입 실수 비교 :  " + Double.compare(c, d)); // -1
     System.out.println("double 타입 실수 비교 :  " + Double.compare(d, c)); // 1
 
+    // 얕은 복사 확인
+    Company c1 = new Company("LG전자", "서울시 서초구");
+    products[0].setCompany(c1);
+
+    Product pclone = null;
+    try {
+      pclone = (Product) products[0].clone();
+    } catch (CloneNotSupportedException e) {
+      System.out.println("clone 예외!");
+    }
+    System.out.println("~~~~~ 얕은 복사 테스트 ~~~~~");
+    System.out.println(products[0]);
+    System.out.println(pclone);
+    System.out.println(" \t 주소 참조값 확인");
+    System.out.println(products[0].hashCode());
+    System.out.println(pclone.hashCode());
+    // products[0] 의 company 주소와 복제한 pclone 의 company 주소가 같은 얕은 복사
+
   }
 }
 
-class Product implements Comparable<Product> {
+class Company {
+  private String name;
+  private String address;
+
+  Company(String name, String address) {
+    this.name = name;
+    this.address = address;
+  }
+}
+
+class Product implements Comparable<Product>, Cloneable {
   private String name;
   private double price;
+
+  // 얕은 복사를 확인하기 위한 객체 정의
+  private Company company;
+
+  public void setCompany(Company company) {
+    this.company = company;
+  }
+
+  public Company getCompany() {
+    return company;
+  }
+
+  @Override
+  protected Object clone() throws CloneNotSupportedException {
+    return super.clone();
+  }
 
   Product(String name, double price) {
     this.name = name;
