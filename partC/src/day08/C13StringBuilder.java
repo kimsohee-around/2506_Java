@@ -24,17 +24,31 @@ public class C13StringBuilder {
     System.out.println("str hashcode : " + Integer.toHexString(str.hashCode()));
     System.out.println("sb hashcode : " + Integer.toHexString(sb.hashCode())); // 초기 상태와 같은 값
 
-    // 문자열의 메소드 중 일부는 CharSequence 인터페이스 구현(재정의) 메소드
+    // ✅ 문자열의 메소드 중 일부는 CharSequence 인터페이스 구현(재정의) 메소드
+    System.out.println("str 메소드 실행");
     System.out.println(str.length());
     System.out.println(str.charAt(2));
     System.out.println(str.toString());
     System.out.println(str.isEmpty()); // default 메소드로 정의
-
+    System.out.println("sb 메소드 실행");
     System.out.println(sb.length());
     System.out.println(sb.charAt(2));
     System.out.println(sb.toString());
     System.out.println(sb.isEmpty()); // default 메소드로 정의
     // 결론 : 🔥String, StringBuilder 는 CharSequence 인터페이스를 구현한 클래스이다.
+
+    // String 문자열 메소드는 인자 타입으로 CharSequence 것이 있습니다.
+    str = "Hello~ java, react";
+    StringBuilder temp = new StringBuilder("java");
+    System.out.println(str.contains(temp));
+    System.out.println(str.replace(temp, "자바"));
+
+    // 🔥 StringBuilder 는 문자열 저장 가변객체를 생성합니다.
+    // 문자열을 변경하려면 append() , insert(), delete(), replace(), reverse() 실행합니다.
+    // -> 리턴 타입이 StringBuilder 이므로 메소드를 체이닝 방식으로 작성할 수 있습니다.
+    temp.append(" 자바").append(",").append(10).replace(2, 4, "*");
+    // "va" 문자열을 "*" 로 치환
+    System.out.println(temp);
 
   }
 
