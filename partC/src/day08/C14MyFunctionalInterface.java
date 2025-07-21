@@ -51,8 +51,10 @@ public class C14MyFunctionalInterface {
  * 
  * 
  */
+@FunctionalInterface
 interface ITestA {
   void testa(String message); // 인자 O, 리턴 X : Consumer (소비자)
+  // void testXXX(); // 오류 : why? @FunctionalInterface는 함수형 인터페이스에만 표시
 }
 
 interface ITestB {
