@@ -54,5 +54,5 @@ public class D01BitOperatorTest {
     return String.format("%32s", Integer.toBinaryString(x)).replace(" ", "0");
   }
 
-  // 양수를 음수로 변화하는 메소드 : 부호 반전 + 1
+  // 양수를 음수(음수를 양수)로 변화하는 메소드 : 부호 반전 + 1
 }
