@@ -41,4 +41,12 @@
 - 8일차
   - 오전 : 7일차 문제 풀이 -> 래퍼클래스의 static compare 메소드 , clone() 의 얕은 복사 테스트
   - 오후 : 문자열 String, StringBuilder, StringBuffer 비교. CharSequence 인터페이스 테스트  
+
+- 9일차
+
+롬복 lombok 라이브러리 
+: getter/setter, toString, 생성자 등 반복적인 코드를 개발 단계에서 생성합니다.
+1) lombok.org 에서 다운로드하기
+2) 현재 프로젝트에 라이브러리 추가하기
+JAVA PROJECTS 탭의 Referenced Libraries 에서 + 클릭해서 추가합니다.
            
