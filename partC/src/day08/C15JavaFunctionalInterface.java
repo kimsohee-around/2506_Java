@@ -2,6 +2,7 @@ package day08;
 
 import java.util.function.Consumer;
 import java.util.function.Function;
+import java.util.function.Predicate;
 import java.util.function.Supplier;
 
 // 자바에서 제공하는 함수형 인터페이스 알아보기
@@ -44,5 +45,13 @@ public class C15JavaFunctionalInterface {
     };
     int index = f4.apply("hello *** hello *** hello");
     System.out.println("last index : " + index);
+
+    Predicate<String> f5 = new Predicate<String>() {
+      @Override
+      public boolean test(String t) {
+        return t.length() < 10;
+      }
+    };
+    System.out.println(f5.test("abc**1234"));
   }
 }

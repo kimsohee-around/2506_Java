@@ -31,6 +31,10 @@ public class C16ConsumerTest {
         System.out.println("t*11 =" + (t * 11));
       }
     });
+
+    
+
+
   }
 
 }

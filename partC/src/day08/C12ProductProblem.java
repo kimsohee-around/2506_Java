@@ -46,7 +46,7 @@ public class C12ProductProblem {
     System.out.println("products[0] : " + products[0]);
     System.out.println("pclone : " + pclone);
     System.out.println(" \t Product 타입 객체 참조값 확인");
-      System.out.println("그러나, 복제 후의 아래의 두 객체는 주소는 다릅니다.(새로운 객체로 복제)");
+    System.out.println("그러나, 복제 후의 아래의 두 객체는 주소는 다릅니다.(새로운 객체로 복제)");
     System.out.println(products[0].hashCode() + "," + Integer.toHexString(products[0].hashCode()));
     System.out.println(pclone.hashCode() + "," + Integer.toHexString(pclone.hashCode()));
     // products[0] 의 company 주소와 복제한 pclone 의 company 주소가 같은 얕은 복사
@@ -55,7 +55,7 @@ public class C12ProductProblem {
     System.out.println("products[0].getCompany() : " + products[0].getCompany());
     System.out.println("pclone.getCompany() : " + pclone.getCompany());
     // 🔥 clone() 의 기본 동작이 '얕은 복사'이므로 멤버 값 중 객체는 참조값을 복사합니다.
-    //    깊은 복사는 각각 company 객체가 다른 주소 즉 새로운 객체로 복사되는 것 입니다.
+    // 깊은 복사는 각각 company 객체가 다른 주소 즉 새로운 객체로 복사되는 것 입니다.
 
   }
 }
@@ -98,8 +98,8 @@ class Product implements Comparable<Product>, Cloneable {
   @Override
   public int compareTo(Product other) {
     // Product 객체 비교는 '가격'으로 한다.
-    // return (int) (this.price - other.price); // 1안)
-    return Double.compare(this.price, other.price); // 2안
+    return (int) (this.price - other.price); // 1안)
+    // return Double.compare(this.price, other.price); // 2안
     // return this.price.compareTo(other.price);
     // 3안) 단, private Double price; 로 변경해야 함
   }
