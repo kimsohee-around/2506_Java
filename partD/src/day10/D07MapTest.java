@@ -48,12 +48,16 @@ public class D07MapTest {
       // map 의 key 값만 모아서 set 을 만들고(keyset) 여기서 key를 가져와 반복
       System.out.println(key + ":" + treeMap.get(key));
     }
-    System.out.println("Map.Entry 내부클래스는 k,v 를 한쌍으로 저장.");
+
+    System.out.println(" Map.Entry 내부클래스는 k,v 를 한쌍으로 저장.");
     System.out.println("\nentry set : " + treeMap.entrySet().toString());
     System.out.println("~~~ entry set 반복문(stream) ~~~");
+    System.out.println("key와 value 의 getter 는 entry 타입에서 각각 가져올수 있음.");
+    // for 문 작성해보세요.
     treeMap.entrySet().stream()
-        .forEach(entry -> System.out.println(entry + "-" + entry.getKey() + "," + entry.getValue()));
+        .forEach(entry -> System.out.println(entry + "   " + entry.getKey() + "," + entry.getValue()));
 
+    System.out.println("values : " + treeMap.values());
   }
 
 }
