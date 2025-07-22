@@ -54,3 +54,6 @@
 2) 현재 프로젝트에 라이브러리 추가하기
 JAVA PROJECTS 탭의 Referenced Libraries 에서 + 클릭해서 추가합니다.
            
+- 10일차 :
+  - 오전 : List 를 활용한 회원 관리 App 완성
+  - 오후 : Set, Map
