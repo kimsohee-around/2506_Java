@@ -1,5 +1,8 @@
 package day10;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class D10WordCountEx {
   public static void main(String[] args) {
     String lyrics = "Longing for you\r\n" +
@@ -25,11 +28,35 @@ public class D10WordCountEx {
 
     // \s 정규식 기호는 공백, 탭, 줄바꿈. 문자열을 단어로 분리하는 기준
     String[] words = lyrics.split("\\s+");
-    System.out.println("단어의 갯수 : " + words.length);
+    System.out.println("단어의 갯수 : " + words.length); // 68
 
     // 앞의 getOrDefault 메소드를 사용해서 단어가 나온 횟수 Map으로 저장하기
-    // 횟수의 합계 = words.length (검증)
-    
+    // 횟수의 합계(sum) = words.length (검증)
+    Map<String, Integer> countMap = new HashMap<>();
+    for (String word : words) {
+      countMap.put(word, countMap.getOrDefault(word, 0) + 1);
+    }
 
+    int sum = 0;
+    int maxCount = 0; // maxCount 4회인 단어가 여러개이면
+    StringBuilder sb = new StringBuilder(); // maxCount 단어들을 저장
+    for (String key : countMap.keySet()) {
+      int val = countMap.get(key);
+      System.out.println(key + " (" + val + " 회)");
+      sum += val; // value(단어의 출현 횟수) 누적합계
+      // 출현 횟수 최대값 찾기
+      if (val > maxCount) // 현재의 val 와 최대횟수 maxCount 비교
+        maxCount = val;
+    }
+    // maxCount 에 해당하는 단어를 sb에 추가
+    for (String key : countMap.keySet()) {
+      if (countMap.get(key) == maxCount) {   // value 가 maxCount 와 같은지 비교
+        sb.append(key).append(",");   // 단어 추가
+      }
+    }
+
+    System.out.println("출현 단어의 갯수 : " + countMap.size()); // 중복된 단어없이
+    System.out.println("단어의 총 출현 횟수 : " + sum);
+    System.out.println("최다 출현 단어 : " + sb.toString() + " 횟수: " + maxCount);
   }
 }
