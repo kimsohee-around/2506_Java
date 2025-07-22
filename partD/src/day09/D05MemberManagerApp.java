@@ -12,17 +12,37 @@ public class D05MemberManagerApp {
     boolean status = true;
     while (status) {
       System.out.println("\n작업 메뉴를 선택하세요.");
-      System.out.println("[A] 회원 추가  [R] 회원 삭제   [U] 회원 포인트 변경  [S] 회원 목록  [E] 종료");
+      System.out.println("[A] 회원 추가  [R] 회원 삭제   [U] 회원 포인트 변경 " +
+          "\n[S] 회원 목록    [N] 이름 조회      [E] 종료");
       String menu = System.console().readLine("선택 >>> ");
 
       switch (menu.toUpperCase()) {
         case "A":
           addMember(list); // id, 이름 입력. point는 기본값 100
           break;
+        case "N":
+          String find = System.console().readLine("\t조회할 이름 입력 >>> ");
+          int count = 0;
+          for (int i = 0; i < list.size(); i++) {
+            Member m = list.get(i);
+            if (m.getName().contains(find)) {
+              count++;
+              // 순서대로 인덱스 i 의 데이터 가져와서 getter 이름값이 contains(find)
+              System.out.println("\t" + i + ":  " + m);
+            }
+          }
+          if (count == 0)
+            System.out.println("\t조회 데이터가 없습니다.");
+          break;
         case "R":
           int index = Integer.parseInt(
               System.console().readLine("\t삭제할 인덱스 입력 >>>>"));
-          list.remove(index);
+          if (confirm("회원 삭제")) {
+            Member m = list.remove(index); // 리턴값은 삭제한 index 위치의 데이터
+            System.out.println("\t삭제 데이터 확인 : " + m);
+          } else {
+            System.out.println("\t삭제 취소합니다.");
+          }
           break;
         case "U":
           index = Integer.parseInt(
