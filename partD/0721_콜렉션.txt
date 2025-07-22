@@ -7,4 +7,4 @@
 
 - List 는 배열과 유사
   Set 은 수학 집합의 개념
-  Map 은 key 를 이용해서 데이터 접근
+  Map 은 key 를 이용해서 데이터(value) 접근
