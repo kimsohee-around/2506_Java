@@ -21,7 +21,9 @@ public class D13PeopleEquality {
     // 동일성 검사
     System.out.println("\n1. 동일성 검사");
     People temp = new People(1112, "최사나");
-    System.out.println("p2 == temp : " + (p2 == temp));
+    System.out.println("p2 == temp : " + (p2 == temp));  // 동등성 상관없이 항상 false
+
+    System.out.println("**다른 객체에 대해 동등성 구현하면 해시코드 값이 같도록 합니다.단, 실체는 다르다.**");
     System.out.println("p2.hashCode() : " + p2.hashCode());
     System.out.println("temp.hashCode() : " + temp.hashCode());
 
@@ -41,14 +43,20 @@ public class D13PeopleEquality {
     index = list.lastIndexOf(temp);
     System.out.println("lastIndexOf p4 : " + index);
 
+    //set 의 동등성 테스트 위해 새로운 객체 추가
+    list.add(temp);
+    list.add(new People(1112, "최사나"));
+
     Set<People> set = new HashSet<>(list);
-    System.out.println("\n5. 동등성과 Set");
+    System.out.println("\n5. 동등성과 Set - Set은 중복된 값을 저장하지 않는다.");
     System.out.println("set 크기 : " + set.size());
     System.out.println("set  : " + set);
 
     // Peopel 클래스 @EqualsAndHashCode 구현이 있느냐 없느냐 에 따라 동등성 검사 여부 결정
     // 테스트 하기 : @EqualsAndHashCode 있을 때 없을 때 비교해서 정리하세요.
     // ✅ @EqualsAndHashCode 구현이 있으면 동등성 검사를 할수 있다.
+    // ✅ 결론 : @EqualsAndHashCode 구현하여 내용이 같으면 '동등하다(equality)' 고 판단합니다.
+    //     예시 : 내용이 같으면 equals() 결과 참, indexOf() 찾기, Set 자료구조 중복되지 않고 저장.
   }
 
 }
