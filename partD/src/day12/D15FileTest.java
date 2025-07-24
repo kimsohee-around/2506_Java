@@ -4,7 +4,6 @@ import java.io.File;
 
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
-import javax.swing.filechooser.FileNameExtensionFilter;
 
 import java.awt.FileDialog;
 
@@ -44,7 +43,7 @@ public class D15FileTest {
   public static String showFileDialog(String title, int type) {
     // 윈도우 창 객체 생성.파일 선택 대화상자의 컨테이너
     JFrame jf = new JFrame();
-    jf.setVisible(false);
+    jf.setVisible(false); // 사이즈가 0
 
     // import java.awt.FileDialog
     FileDialog fd = new FileDialog(jf, title, type); // 대화상자의 제목(title)과 버튼이름(type) 설정

@@ -18,6 +18,7 @@
    - 문자 기반 파일 입출력
    - 텍스트 파일 처리에 적합(문자 인코딩-2진 데이터를 해당 문자로 변환)
    - 한 문자씩 처리 : 예시는 txt, md, 소스 코드 등  자바는 문자 타입 char(2바이트)
+     => 행(line) 단위 입출력을 하려면 PrintWriter, Scanner     
 
 3. FileOutputStream/FileInputStream
    - 바이트 기반 파일 입출력
