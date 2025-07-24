@@ -8,6 +8,7 @@ static,정적인,2
 
 
 2. 1번 csv 파일을 읽어와서 List<JavaKeyWord> 로 변환하는 메소드를 만드세요.
+리턴 타입 List<JavaKeyWord>
 
 @Getter
 @Setter

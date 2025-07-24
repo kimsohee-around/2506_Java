@@ -14,7 +14,7 @@ public class D18TextFileTest {
     // readText();
     // readByLine();
     writeFile();
-    writeFileAutoClose();
+    // writeFileAutoClose();
   }
 
   // ✅try-with-resources : try 구문에서 사용한 입출력 리소스(장치)를 자동으로 해제(close X)
@@ -22,7 +22,7 @@ public class D18TextFileTest {
     String filename = "텍스트파일출력.txt";
     try (
         // ✅ close 가 필요한 선언
-        FileWriter fw = new FileWriter(filename, true); // true : 기존 파일내용에 추가
+        FileWriter fw = new FileWriter(filename, Charset.forName("UTF-8"), true);
         PrintWriter pw = new PrintWriter(fw);) {
 
       int line = 0;
@@ -43,7 +43,8 @@ public class D18TextFileTest {
     FileWriter fw = null;
     PrintWriter pw = null;
     try {
-      fw = new FileWriter(filename, true); // true : 기존 파일내용에 추가
+      fw = new FileWriter(filename, Charset.forName("UTF-8"), true);
+      // true : 기존 파일내용에 추가
       pw = new PrintWriter(fw); // Charset 지정은 가능하나 첫번째 인자 타입이 제한적
       String test = "PrintWriter는 FileWriter 또는 파일명을 인자로 사용합니다.";
       String[] lines = test.split("\\s+");
