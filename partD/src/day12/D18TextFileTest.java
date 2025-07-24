@@ -14,6 +14,7 @@ public class D18TextFileTest {
     // readText();
     // readByLine();
     writeFile();
+    writeFileAutoClose();
   }
 
   // ✅try-with-resources : try 구문에서 사용한 입출력 리소스(장치)를 자동으로 해제(close X)
